@@ -32,8 +32,8 @@ prematuremedla=no
 dtmfmode=rfc2833
 relaxdtmf=yes
 rfc2833compensate=no
-в файл /etc/asterisk/sip.conf (главное - задать һost и сontext)
-и перезапустить командой аsterisk-x "sip reload"
+в файл /etc/asterisk/sip.conf (главное - задать host и сontext)
+и перезапустить командой аsterisk -x "sip reload"
 возможно, с sudo
 все
 Важно правильно настроить ini:
@@ -170,7 +170,7 @@ class ASPM:
         except Exception as e:
             logging.error('ini file not found!')
 
-    def _send_email(self, subject, msg, to='email-adress'):
+    def _send_email(self, subject, msg, to='email-address'):
         send_email = {}
         send_email['requests'] = 'send_email'
         if not int(self._config['OPTIONS']['dev']):
